@@ -40,16 +40,14 @@
             
         }
         
-    }
-    
-     ];}
+    }];
+}
 
 
 -(void)generateList:(Notice*)notice
 {
     self.notice = notice;
     [self.tableView reloadData];
-    NSLog(@"Reload Data OK");
     
 }
 

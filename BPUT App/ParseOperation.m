@@ -38,22 +38,11 @@ NSMutableString* tempString;
 
 -(void)startParsing
 {
-    NSLog([[NSString alloc]initWithData:self.dataToParse encoding:NSUTF8StringEncoding]);
     
     NSXMLParser* parser = [[NSXMLParser alloc]initWithData:self.dataToParse];
     [parser setDelegate:self];
-    BOOL result = [parser parse];
+    [parser parse];
     
-    if(result)
-    {
-        NSLog(@"success");
-    }
-    else
-    {
-        NSLog(@"fail");
-
-    }
-
 }
 
 
@@ -61,7 +50,6 @@ NSMutableString* tempString;
 -(void)parserDidStartDocument:(NSXMLParser *)parser
 {
   self.notice = [[Notice alloc]init];
-    NSLog(@"Parsing started");
 }
 
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
@@ -104,7 +92,6 @@ NSMutableString* tempString;
 -(void)parserDidEndDocument:(NSXMLParser *)parser
 {
     [self.mainTableViewControllerInstance performSelector:@selector(generateList:) withObject:self.notice];
-    NSLog(@"Perform selector OK");
 }
 
 @end

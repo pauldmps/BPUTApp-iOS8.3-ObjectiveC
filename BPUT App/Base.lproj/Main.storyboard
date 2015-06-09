@@ -36,6 +36,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="BPUT App" id="JHZ-cx-odn"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Zhg-Ov-eoF">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                     <connections>
                         <segue destination="IPj-pv-syp" kind="push" identifier="HTML Notice Segue" id="qrh-ij-iYG"/>
                         <segue destination="bqh-Ry-FlY" kind="push" identifier="PDF Notice Segue" id="F7V-gc-Oxh"/>
