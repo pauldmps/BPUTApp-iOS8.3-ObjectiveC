@@ -8,10 +8,14 @@
 
 #import "MainTableViewController.h"
 #import "ParseOperation.h"
+#import "URLDecoder.h"
+#import "HTMLNoticeViewController.h"
+#import "PDFNoticeViewController.h"
 
 @interface MainTableViewController ()
 
 @property (nonatomic,strong) Notice* notice;
+@property (nonatomic,strong) NSString* urlToSegue;
 
 @end
 
@@ -28,29 +32,52 @@
     [NSURLConnection sendAsynchronousRequest:noticeListRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse* response,NSData* data, NSError* connectionError){
         if(connectionError != nil)
         {
+            
         }
         else
         {
-            
-           //NSLog([[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-            
                 ParseOperation* parseOperation = [[ParseOperation alloc]initWithData:data instance:self];
                 [parseOperation startParsing];
-            
-            
         }
         
     }];
 }
 
 
--(void)generateList:(Notice*)notice
+-(void)generateListWithObject:(Notice *)notice
 {
     self.notice = notice;
     [self.tableView reloadData];
     
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%d",indexPath.row);
+    
+    URLDecoder* urlDecoder = [[URLDecoder alloc]init];
+    NSString* decodedUrl = [urlDecoder getDecodedURL:[self.notice.url objectAtIndex:indexPath.row]];
+    self.urlToSegue = decodedUrl;
+    
+  //  NSLog(decodedUrl);
+    
+    if([urlDecoder getUrlType:decodedUrl] == urlDecoder.HTML_FILE)
+    {
+    
+        [self performSegueWithIdentifier:@"HTML Notice Segue" sender:self];
+        
+    }
+    else if([urlDecoder getUrlType:decodedUrl] == urlDecoder.PDF_FILE)
+    {
+        
+        [self performSegueWithIdentifier:@"PDF Notice Segue" sender:self];
+
+    }
+    else
+    {
+        NSLog(@"Error in determing URL type");
+    }
+}
 
 
 #pragma mark - Table view data source
@@ -68,20 +95,29 @@
     
     cell.textLabel.text = [self.notice.notice_head objectAtIndex:indexPath.row];
     
-
-    
     return cell;
 }
 
 
-/*
+
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if([segue.identifier isEqualToString:@"HTML Notice Segue"])
+    {
+        HTMLNoticeViewController* htmlNoticeViewController = (HTMLNoticeViewController*)segue.destinationViewController;
+        htmlNoticeViewController.url = self.urlToSegue;
+    }
+    
+    if ([segue.identifier isEqualToString:@"PDF Notice Segue"]) {
+        PDFNoticeViewController* pdfNoticeViewController = (PDFNoticeViewController*)segue.destinationViewController;
+        pdfNoticeViewController.url = self.urlToSegue;
+    }
 }
-*/
+
 
 @end

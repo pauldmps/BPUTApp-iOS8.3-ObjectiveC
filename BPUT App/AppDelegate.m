@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PlugPDF/PlugPDF.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    
+    @try {
+        PlugPDFInit("73F5FEGHAGC22G52EDB55HC9B84HEEEG7255HG4662EB4C2GE75HFBF5");
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Exception %@", exception.description);
+    }
+    
     return YES;
 }
 
@@ -39,7 +48,8 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    PlugPDFUninit();
+
 }
 
 @end

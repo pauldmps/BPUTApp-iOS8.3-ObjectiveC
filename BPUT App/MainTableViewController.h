@@ -12,7 +12,7 @@
 
 @interface MainTableViewController : UITableViewController
 
--(void)generateList:(Notice *)notice;
+-(void)generateListWithObject:(Notice *)notice;
 
 
 @end

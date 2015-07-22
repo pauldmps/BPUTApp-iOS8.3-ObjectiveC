@@ -40,8 +40,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                     <connections>
-                        <segue destination="IPj-pv-syp" kind="push" identifier="HTML Notice Segue" id="qrh-ij-iYG"/>
-                        <segue destination="bqh-Ry-FlY" kind="push" identifier="PDF Notice Segue" id="F7V-gc-Oxh"/>
+                        <segue destination="IPj-pv-syp" kind="push" identifier="HTML Notice Segue" id="3ps-LW-cMf"/>
+                        <segue destination="bqh-Ry-FlY" kind="push" identifier="PDF Notice Segue" id="OVO-ew-Taf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKg-eg-AdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -56,19 +56,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aWf-0T-1S0">
-                                <rect key="frame" x="16" y="86" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="F2L-Uu-jV6">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="0ho-ma-KfH"/>
                     <connections>
-                        <outlet property="NoticeTextLabel" destination="aWf-0T-1S0" id="Qpg-2w-nZo"/>
+                        <outlet property="noticeTextView" destination="F2L-Uu-jV6" id="GkB-No-UY3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjK-qe-Tu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -83,15 +83,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" id="VjG-ko-VYP">
-                                <rect key="frame" x="0.0" y="512" width="320" height="49"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="KCD-nD-VOy">
+                                <rect key="frame" x="11" y="524" width="497" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem systemItem="favorites" id="MpS-Dw-DRy"/>
-                                    <tabBarItem systemItem="more" id="Tde-f0-Btc"/>
+                                    <barButtonItem title="&lt;" id="J2h-7I-uKd">
+                                        <connections>
+                                            <action selector="previousPage:" destination="bqh-Ry-FlY" id="J7c-Nf-OBb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="&gt;" id="ktG-Rb-een">
+                                        <connections>
+                                            <action selector="nextPage:" destination="bqh-Ry-FlY" id="nov-KF-fRc"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
-                            </tabBar>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

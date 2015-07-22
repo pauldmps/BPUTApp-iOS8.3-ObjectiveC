@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Notice.h"
 
-@interface HTMLNoticeViewController : UITableViewController
+
+
+@interface HTMLNoticeViewController : UIViewController
+
+@property (nonatomic,strong)NSString* url;
+
+-(void)displayNoticeWithObject:(Notice*)notice;
 
 @end

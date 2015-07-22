@@ -12,7 +12,7 @@
 
 @property (readwrite,nonatomic,strong) Notice* notice;
 @property (copy) NSData* dataToParse;
-@property (nonatomic,strong)MainTableViewController* mainTableViewControllerInstance;
+@property (nonatomic)UIViewController* viewControllerInstance;
 
 
 @end
@@ -25,13 +25,14 @@ NSUInteger i =0;
 NSMutableString* tempString;
 
 
--(instancetype)initWithData:(NSData*)data instance:(MainTableViewController*)instance //constructor
+-(instancetype)initWithData:(NSData*)data instance:(UIViewController*)instance //constructor
 {
     self = [super init];
     if(self != nil)
     {
         self.dataToParse = [data copy];
-        self.mainTableViewControllerInstance = instance;
+        self.viewControllerInstance = instance;
+        self.notice = [[Notice alloc]init];
     }
     return self;
 }
@@ -46,11 +47,6 @@ NSMutableString* tempString;
 }
 
 
-
--(void)parserDidStartDocument:(NSXMLParser *)parser
-{
-  self.notice = [[Notice alloc]init];
-}
 
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
 {
@@ -69,6 +65,7 @@ NSMutableString* tempString;
 {
     
     tempString = [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]mutableCopy];
+    NSLog(@"%@",tempString);
     
 }
 
@@ -91,7 +88,16 @@ NSMutableString* tempString;
 
 -(void)parserDidEndDocument:(NSXMLParser *)parser
 {
-    [self.mainTableViewControllerInstance performSelector:@selector(generateList:) withObject:self.notice];
+    if([self.viewControllerInstance isKindOfClass:[MainTableViewController class]])
+    {
+        [self.viewControllerInstance performSelector:@selector(generateListWithObject:) withObject:self.notice];
+    }
+    
+    if ([self.viewControllerInstance isKindOfClass:[HTMLNoticeViewController class]])
+    {
+        [self.viewControllerInstance performSelector:@selector(displayNoticeWithObject:) withObject:self.notice];
+
+    }
 }
 
 @end

@@ -19,6 +19,7 @@
     {
         self.url = [[NSMutableArray alloc]init];
         self.notice_head= [[NSMutableArray alloc]init];
+        self.notice_body= [[NSMutableString alloc]init];
         self.table_head= [[NSMutableArray alloc]init];
         self.table_body= [[NSMutableArray alloc]init];
         self.has_table=false;

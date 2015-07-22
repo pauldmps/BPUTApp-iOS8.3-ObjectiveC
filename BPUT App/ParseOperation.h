@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Notice.h"
 #import "MainTableViewController.h"
+#import "HTMLNoticeViewController.h"
 
 
 @interface ParseOperation : NSObject
@@ -16,7 +17,7 @@
 @property (readonly, nonatomic, strong) Notice* notice;
 
 
--(instancetype)initWithData:(NSData*)data instance:(MainTableViewController*)instance;
+-(instancetype)initWithData:(NSData*)data instance:(UIViewController*)instance;
 -(void)startParsing;
 
 

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlugPDF/DocumentViewEventDelegate.h"
 
-@interface PDFNoticeViewController : UIViewController
+@interface PDFNoticeViewController : UIViewController <PlugPDFDocumentViewEventDelegate>
+
+@property (nonatomic,strong)NSString* url;
 
 @end
