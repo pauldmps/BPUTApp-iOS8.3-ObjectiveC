@@ -38,9 +38,8 @@
     
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
-    NSURLSession *session = [NSURLSession sharedSession];
     
-    [session dataTaskWithRequest:request completionHandler:^(NSData *data,NSURLResponse *response, NSError *connectionError)
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
     {
         if(!connectionError)
         {

@@ -24,12 +24,11 @@
     
     NSString* dataToPost = [@"url=" stringByAppendingString: mainURLString];
     
-    NSMutableURLRequest* noticeRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://paul-shantanu-bputapp.appspot.com/notice.php"]];
+    NSMutableURLRequest* noticeRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://paul-shantanu-bputapp.appspot.com/notice.php"]];
     [noticeRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [noticeRequest setHTTPMethod:@"POST"];
     [noticeRequest setHTTPBody:[NSData dataWithBytes:[dataToPost UTF8String] length:strlen([dataToPost UTF8String])]];
-    NSURLSession *session = [NSURLSession sharedSession];
-    [session dataTaskWithRequest:noticeRequest completionHandler:^(NSData* data, NSURLResponse* response,NSError* connectionError){
+    [NSURLConnection sendAsynchronousRequest:noticeRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse* response,NSData* data, NSError* connectionError){
         if(connectionError != nil)
         {
         }

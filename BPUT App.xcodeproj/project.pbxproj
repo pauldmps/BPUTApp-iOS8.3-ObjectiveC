@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		7C16EF091B1D7350001834AB /* HTMLNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C16EF081B1D7350001834AB /* HTMLNoticeViewController.m */; };
 		7C16EF0C1B1D73B3001834AB /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C16EF0B1B1D73B3001834AB /* MainTableViewController.m */; };
+		7C25729F1B29C552002F0F38 /* PlugPDF.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7C25729D1B29C552002F0F38 /* PlugPDF.bundle */; };
+		7C2572A01B29C552002F0F38 /* PlugPDF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C25729E1B29C552002F0F38 /* PlugPDF.framework */; };
 		7C2572A21B29C5B3002F0F38 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2572A11B29C5B3002F0F38 /* libstdc++.dylib */; };
 		7C2572A41B29C5BD002F0F38 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2572A31B29C5BD002F0F38 /* libz.dylib */; };
 		7C2572A61B29C5D3002F0F38 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2572A51B29C5D3002F0F38 /* AVFoundation.framework */; };
 		7C35B0EE1B24ADB600B2027F /* PDFNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C35B0ED1B24ADB600B2027F /* PDFNoticeViewController.m */; };
 		7C35B0F11B24BA4E00B2027F /* ParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C35B0F01B24BA4E00B2027F /* ParseOperation.m */; };
-		7C7EE3211CEEBD1400BD086E /* PlugPDF.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7C7EE31F1CEEBD1400BD086E /* PlugPDF.bundle */; };
-		7C7EE3221CEEBD1400BD086E /* PlugPDF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C7EE3201CEEBD1400BD086E /* PlugPDF.framework */; };
 		7CB229CB1B252E2900B2BBE3 /* Notice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB229CA1B252E2900B2BBE3 /* Notice.m */; };
 		7CB447351B27DBF40055A31F /* URLDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB447341B27DBF40055A31F /* URLDecoder.m */; };
 		7CB9629B1B19F9B400852C6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB9629A1B19F9B400852C6A /* main.m */; };
@@ -41,6 +41,8 @@
 		7C16EF081B1D7350001834AB /* HTMLNoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTMLNoticeViewController.m; path = ../HTMLNoticeViewController.m; sourceTree = "<group>"; };
 		7C16EF0A1B1D73B3001834AB /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		7C16EF0B1B1D73B3001834AB /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		7C25729D1B29C552002F0F38 /* PlugPDF.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PlugPDF.bundle; path = "../../../../Downloads/PlugPDF_iOS/Release-Universal/PlugPDF.bundle"; sourceTree = "<group>"; };
+		7C25729E1B29C552002F0F38 /* PlugPDF.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlugPDF.framework; path = "../../../../Downloads/PlugPDF_iOS/Release-Universal/PlugPDF.framework"; sourceTree = "<group>"; };
 		7C2572A11B29C5B3002F0F38 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		7C2572A31B29C5BD002F0F38 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		7C2572A51B29C5D3002F0F38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -48,8 +50,6 @@
 		7C35B0ED1B24ADB600B2027F /* PDFNoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFNoticeViewController.m; path = ../PDFNoticeViewController.m; sourceTree = "<group>"; };
 		7C35B0EF1B24BA4E00B2027F /* ParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseOperation.h; sourceTree = "<group>"; };
 		7C35B0F01B24BA4E00B2027F /* ParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseOperation.m; sourceTree = "<group>"; };
-		7C7EE31F1CEEBD1400BD086E /* PlugPDF.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PlugPDF.bundle; sourceTree = "<group>"; };
-		7C7EE3201CEEBD1400BD086E /* PlugPDF.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlugPDF.framework; sourceTree = "<group>"; };
 		7CB229C91B252E2900B2BBE3 /* Notice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notice.h; sourceTree = "<group>"; };
 		7CB229CA1B252E2900B2BBE3 /* Notice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notice.m; sourceTree = "<group>"; };
 		7CB447331B27DBF40055A31F /* URLDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLDecoder.h; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 				7C2572A61B29C5D3002F0F38 /* AVFoundation.framework in Frameworks */,
 				7C2572A41B29C5BD002F0F38 /* libz.dylib in Frameworks */,
 				7C2572A21B29C5B3002F0F38 /* libstdc++.dylib in Frameworks */,
-				7C7EE3221CEEBD1400BD086E /* PlugPDF.framework in Frameworks */,
+				7C2572A01B29C552002F0F38 /* PlugPDF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +95,8 @@
 				7C2572A51B29C5D3002F0F38 /* AVFoundation.framework */,
 				7C2572A31B29C5BD002F0F38 /* libz.dylib */,
 				7C2572A11B29C5B3002F0F38 /* libstdc++.dylib */,
-				7C7EE31F1CEEBD1400BD086E /* PlugPDF.bundle */,
-				7C7EE3201CEEBD1400BD086E /* PlugPDF.framework */,
+				7C25729D1B29C552002F0F38 /* PlugPDF.bundle */,
+				7C25729E1B29C552002F0F38 /* PlugPDF.framework */,
 			);
 			name = "PlugPDF Requires Files";
 			path = "BPUT App";
@@ -216,12 +216,11 @@
 		7CB9628D1B19F9B400852C6A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Shantanu Paul";
 				TargetAttributes = {
 					7CB962941B19F9B400852C6A = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = 4G2F3VM699;
 					};
 					7CB962AD1B19F9B500852C6A = {
 						CreatedOnToolsVersion = 6.3;
@@ -253,7 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C7EE3211CEEBD1400BD086E /* PlugPDF.bundle in Resources */,
+				7C25729F1B29C552002F0F38 /* PlugPDF.bundle in Resources */,
 				7CB962A41B19F9B400852C6A /* Main.storyboard in Resources */,
 				7CB962A91B19F9B400852C6A /* LaunchScreen.xib in Resources */,
 				7CB962A61B19F9B400852C6A /* Images.xcassets in Resources */,
@@ -344,7 +343,6 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -360,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -397,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -408,19 +406,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/shantanupaul/Downloads/PlugPDF_iOS/Release-Universal",
-					"$(PROJECT_DIR)/BPUT",
-					App,
 				);
 				INFOPLIST_FILE = "BPUT App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.paulshantanu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -428,19 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/shantanupaul/Downloads/PlugPDF_iOS/Release-Universal",
-					"$(PROJECT_DIR)/BPUT",
-					App,
 				);
 				INFOPLIST_FILE = "BPUT App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.paulshantanu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -458,7 +444,6 @@
 				);
 				INFOPLIST_FILE = "BPUT AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.paulshantanu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BPUT App.app/BPUT App";
 			};
@@ -474,7 +459,6 @@
 				);
 				INFOPLIST_FILE = "BPUT AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.paulshantanu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BPUT App.app/BPUT App";
 			};

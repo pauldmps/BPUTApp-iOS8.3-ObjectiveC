@@ -18,7 +18,7 @@
 
 @implementation URLDecoder
 
--(instancetype)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -33,7 +33,7 @@
     self.url = [[NSMutableString alloc]init];
     NSLog(@"getDecodedURL is called");
 
-    urlToDecode = [[urlToDecode stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    urlToDecode = [[urlToDecode stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet] ]stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
     
     
     if([urlToDecode hasPrefix:@"javascript"])
