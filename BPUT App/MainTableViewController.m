@@ -24,15 +24,16 @@
 
 
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
     
-    static NSString* mainURLString = @"http://paul-shantanu-bputapp.appspot.com/default.php";
+    static NSString* mainURLString = @"https://paul-shantanu-bputapp.appspot.com/default.php";
     NSURLRequest* noticeListRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:mainURLString]];
-    [NSURLConnection sendAsynchronousRequest:noticeListRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse* response,NSData* data, NSError* connectionError){
+    NSURLSession *session = [NSURLSession sharedSession];
+    [session dataTaskWithRequest:noticeListRequest completionHandler:^(NSData *data,NSURLResponse *response, NSError *connectionError){
         if(connectionError != nil)
         {
-            
+            NSLog(@"no data received");
         }
         else
         {
@@ -53,7 +54,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%d",indexPath.row);
     
     URLDecoder* urlDecoder = [[URLDecoder alloc]init];
     NSString* decodedUrl = [urlDecoder getDecodedURL:[self.notice.url objectAtIndex:indexPath.row]];
