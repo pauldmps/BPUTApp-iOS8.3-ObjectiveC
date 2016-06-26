@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    static NSString* mainURLString = @"http://paul-shantanu-bputapp.appspot.com/default.php";
+    static NSString* mainURLString = @"https://paul-shantanu-bputapp.appspot.com/default.php";
     NSURLRequest* noticeListRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:mainURLString]];
     [NSURLConnection sendAsynchronousRequest:noticeListRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse* response,NSData* data, NSError* connectionError){
         if(connectionError != nil)

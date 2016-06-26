@@ -90,12 +90,14 @@ NSMutableString* tempString;
 {
     if([self.viewControllerInstance isKindOfClass:[MainTableViewController class]])
     {
-        [self.viewControllerInstance performSelector:@selector(generateListWithObject:) withObject:self.notice];
+        //[self.viewControllerInstance performSelector:@selector(generateListWithObject:) withObject:self.notice];
+        [(MainTableViewController *)self.viewControllerInstance generateListWithObject:self.notice];
     }
     
     if ([self.viewControllerInstance isKindOfClass:[HTMLNoticeViewController class]])
     {
-        [self.viewControllerInstance performSelector:@selector(displayNoticeWithObject:) withObject:self.notice];
+        //[self.viewControllerInstance performSelector:@selector(displayNoticeWithObject:) withObject:self.notice];
+        [(HTMLNoticeViewController *)self.viewControllerInstance displayNoticeWithObject:self.notice];
 
     }
 }
